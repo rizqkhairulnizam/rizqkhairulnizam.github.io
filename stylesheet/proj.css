@@ -55,6 +55,7 @@ body {
     color: #b34040; 
 }
 
+/* phones */
 @media (max-width: 600px) {
 
     .menu {
@@ -72,11 +73,34 @@ body {
     }
 
     .pages a {
-        font-size: 5.1pt;
+        font-size: 4.8pt;
     }
 }
 
-@media (max-width: 850px) {
+/* tablets */
+@media (min-width: 601px) {
+
+    .menu {
+        padding: 10px;
+    }
+
+    .iqie {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .pages {
+        gap: 11px;
+    }
+
+    .pages a {
+        font-size: 8.5pt;
+    }
+}
+
+/* bigger-ish tablets */
+@media (min-width: 751px) {
 
     .menu {
         padding: 10px 40px;
@@ -94,5 +118,27 @@ body {
 
     .pages a {
         font-size: 10pt;
+    }
+}
+
+/* everything else */
+@media (min-width: 900px) {
+
+    .menu {
+        padding: 10px 40px;
+    }
+
+    .iqie {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .pages {
+        gap: 20px;
+    }
+
+    .pages a {
+        font-size: 100%;
     }
 }
