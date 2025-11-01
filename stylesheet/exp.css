@@ -47,3 +47,13 @@ body {
 .internship a {
     text-decoration: none;
 }
+
+.internship a:hover {
+    color: #b34040;
+}
+
+.name {
+    padding-left: 8px;
+    background-color: rgb(23, 23, 23);
+    border-style: solid;
+}

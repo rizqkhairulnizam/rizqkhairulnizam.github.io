@@ -50,6 +50,10 @@ body {
     border-style: solid;
 }
 
+.links a:hover {
+    color: #b34040;
+}
+
 input {
     color: black;
 }
