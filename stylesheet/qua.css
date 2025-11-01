@@ -49,3 +49,45 @@ body {
     background-color: rgb(23, 23, 23);
     border-style: solid;
 }
+
+@media (max-width: 600px) {
+
+    .menu {
+        padding: 10px;
+    }
+
+    .iqie {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .pages {
+        gap: 5px;
+    }
+
+    .pages a {
+        font-size: 5.1pt;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .menu {
+        padding: 10px 40px;
+    }
+
+    .iqie {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .pages {
+        gap: 15px;
+    }
+
+    .pages a {
+        font-size: 10pt;
+    }
+}
