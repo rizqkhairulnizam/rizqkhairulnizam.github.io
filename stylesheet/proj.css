@@ -4,6 +4,42 @@
 }
 
 body {
-    padding: 20px;
     background: black;
+}
+
+.menu {
+    display: flex;                    /* Puts logo and pages in one line */
+    justify-content: space-between;   /* Pushes logo left, pages right */
+    align-items: center;              /* Vertically centers both */
+    padding: 10px 40px;               /* Adds some breathing space */
+    background-color: #fff;         /* Optional styling */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.iqie {
+    width: 50px;
+    height: 50px;
+}
+
+.pages {
+    display: flex;
+    gap: 20px;                        /* Adds space between the tabs */
+}
+
+.pages a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.pages a:hover {
+    color: #b34040;                   /* Hover color */
+}
+
+.wrapper {
+    padding: 0px 20px 20px 20px;
 }
