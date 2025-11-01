@@ -48,6 +48,10 @@ body {
     margin: 10px;
 }
 
+.prev a:hover {
+    color: #b34040; 
+}
+
 .content {
     padding: 0px 50px;
 }
