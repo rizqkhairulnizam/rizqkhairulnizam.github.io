@@ -44,6 +44,10 @@ body {
     padding: 0px 20px 20px 20px;
 }
 
-.internship a {
-    text-decoration: none;
+.prev {
+    margin: 10px;
+}
+
+.content {
+    padding: 0px 50px;
 }
