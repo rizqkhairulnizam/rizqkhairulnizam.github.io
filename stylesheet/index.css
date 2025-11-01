@@ -44,6 +44,12 @@ body {
     padding: 0px 20px 20px 20px;
 }
 
+.name {
+    padding-left: 8px;
+    background-color: rgb(23, 23, 23);
+    border-style: solid;
+}
+
 input {
     color: black;
 }
