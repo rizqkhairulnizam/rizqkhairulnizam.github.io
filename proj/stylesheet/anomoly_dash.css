@@ -44,13 +44,14 @@ body {
     padding: 0px 20px 20px 20px;
 }
 
-.name {
-    padding-left: 8px;
-    background-color: rgb(23, 23, 23);
-    border-style: solid;
+.prev {
+    margin: 10px;
 }
 
-.tele-rat_c2 a:hover,
-.anomoly_dash a:hover{
+.prev a:hover {
     color: #b34040; 
+}
+
+.content {
+    padding: 0px 50px;
 }
