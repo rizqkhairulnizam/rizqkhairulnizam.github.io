@@ -102,7 +102,7 @@ h2 {
     }
 
     .bio {
-        display: grid;
+        display: flex;
     }
 }
 
