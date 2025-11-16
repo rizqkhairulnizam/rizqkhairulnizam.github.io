@@ -58,6 +58,24 @@ input {
     color: black;
 }
 
+.bio {
+    display: flex;
+}
+
+.self_img {
+    margin: 0px 20px 20px 0px;
+    width: 15%;
+    height: auto;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* MEDIA QUERIES INCOMING */
+
 /* phones */
 @media (max-width: 600px) {
 
@@ -78,6 +96,14 @@ input {
     .pages a {
         font-size: 4.8pt;
         font-weight: bold;
+    }
+
+    .self_img {
+        width: 100%;
+    }
+
+    .bio {
+        display: grid;
     }
 }
 
@@ -101,6 +127,10 @@ input {
     .pages a {
         font-size: 8.5pt;
     }
+
+    .self_img {
+        width: 60%;
+    }
 }
 
 /* bigger-ish tablets */
@@ -122,6 +152,10 @@ input {
 
     .pages a {
         font-size: 10pt;
+    }
+
+    .self_img {
+        width: 50%;
     }
 }
 
