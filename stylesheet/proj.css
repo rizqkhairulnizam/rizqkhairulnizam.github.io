@@ -50,6 +50,13 @@ body {
     border-style: solid;
 }
 
+.content {
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(23, 23, 23);
+    padding: 10px;
+}
+
 .tele-rat_c2 a:hover,
 .anomoly_dash a:hover{
     color: #b34040; 
