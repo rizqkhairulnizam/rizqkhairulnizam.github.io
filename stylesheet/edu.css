@@ -50,6 +50,14 @@ body {
     border-style: solid;
 }
 
+p {
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.5px;
+    background-color: #333;
+    width: 50%;
+}
+
 /* phones */
 @media (max-width: 600px) {
 
@@ -70,6 +78,10 @@ body {
     .pages a {
         font-size: 4.8pt;
         font-weight: bold;
+    }
+
+    p {
+        width: 100%;
     }
 }
 
