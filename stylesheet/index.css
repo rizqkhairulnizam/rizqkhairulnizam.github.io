@@ -86,7 +86,6 @@ h2 {
     .iqie {
         width: 35px;
         height: 35px;
-
     }
 
     .pages {
@@ -100,6 +99,10 @@ h2 {
 
     .self_img {
         width: 100%;
+    }
+
+    .bio {
+        display: flex;
     }
 }
 
