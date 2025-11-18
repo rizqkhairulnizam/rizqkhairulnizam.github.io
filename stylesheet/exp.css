@@ -44,9 +44,11 @@ body {
     padding: 0px 20px 20px 20px;
 }
 
+/*
 .internship a {
     text-decoration: none;
 }
+*/
 
 .internship a:hover {
     color: #b34040;
