@@ -48,6 +48,10 @@ body {
     margin: 10px;
 }
 
+.prev a{
+    text-decoration: none;
+}
+
 .prev a:hover {
     color: #b34040; 
 }
