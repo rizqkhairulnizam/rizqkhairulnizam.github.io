@@ -50,6 +50,10 @@ body {
     border-style: solid;
 }
 
+a:hover {
+    color: #b34040;
+}
+
 /* phones */
 @media (max-width: 600px) {
 
