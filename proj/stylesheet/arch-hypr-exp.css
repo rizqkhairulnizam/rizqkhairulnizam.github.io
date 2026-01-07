@@ -1,0 +1,150 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+.menu {
+    display: flex;                    /* Puts logo and pages in one line */
+    justify-content: space-between;   /* Pushes logo left, pages right */
+    align-items: center;              /* Vertically centers both */
+    padding: 10px 40px;               /* Adds some breathing space */
+    background-color: #fff;         /* Optional styling */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.iqie {
+    width: 50px;
+    height: 50px;
+}
+
+.pages {
+    display: flex;
+    gap: 20px;                        /* Adds space between the tabs */
+}
+
+.pages a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.pages a:hover {
+    color: #b34040;                   /* Hover color */
+}
+
+.wrapper {
+    padding: 0px 20px 20px 20px;
+}
+
+.prev {
+    margin: 10px;
+}
+
+.prev a{
+    text-decoration: none;
+}
+
+.prev a:hover {
+    color: #b34040; 
+}
+
+.content {
+    padding: 0px 50px;
+}
+
+/* phones */
+@media (max-width: 600px) {
+
+    .menu {
+        padding: 10px;
+    }
+
+    .iqie {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .pages {
+        gap: 5px;
+    }
+
+    .pages a {
+        font-size: 4.8pt;
+        font-weight: bold;
+    }
+}
+
+/* tablets */
+@media (min-width: 601px) {
+
+    .menu {
+        padding: 10px;
+    }
+
+    .iqie {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .pages {
+        gap: 11px;
+    }
+
+    .pages a {
+        font-size: 8.5pt;
+    }
+}
+
+/* bigger-ish tablets */
+@media (min-width: 751px) {
+
+    .menu {
+        padding: 10px 40px;
+    }
+
+    .iqie {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .pages {
+        gap: 15px;
+    }
+
+    .pages a {
+        font-size: 10pt;
+    }
+}
+
+/* everything else */
+@media (min-width: 900px) {
+
+    .menu {
+        padding: 10px 40px;
+    }
+
+    .iqie {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .pages {
+        gap: 20px;
+    }
+
+    .pages a {
+        font-size: 100%;
+    }
+}
