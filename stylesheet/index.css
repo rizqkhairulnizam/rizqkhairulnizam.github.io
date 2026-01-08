@@ -8,11 +8,11 @@ body {
 }
 
 .menu {
-    display: flex;                    /* Puts logo and pages in one line */
-    justify-content: space-between;   /* Pushes logo left, pages right */
-    align-items: center;              /* Vertically centers both */
-    padding: 10px 40px;               /* Adds some breathing space */
-    background-color: #fff;         /* Optional styling */
+    display: flex;                    /* puts logo and pages in one line */
+    justify-content: space-between;   /* pushes logo left, pages right */
+    align-items: center;              /* vertically centers both */
+    padding: 10px 40px;               /* adds some breathing space */
+    background-color: #fff;         /* optional styling */
 }
 
 .logo {
@@ -27,7 +27,7 @@ body {
 
 .pages {
     display: flex;
-    gap: 20px;                        /* Adds space between the tabs */
+    gap: 20px;                       
 }
 
 .pages a {
@@ -37,7 +37,7 @@ body {
 }
 
 .pages a:hover {
-    color: #b34040;                   /* Hover color */
+    color: #b34040;                  
 }
 
 .wrapper {
