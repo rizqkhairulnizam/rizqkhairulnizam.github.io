@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace;*/
+    font-family: 'JetBrains Mono', monospace;
     color: white;
 }
 
@@ -32,7 +48,7 @@ body {
 
 .pages a {
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: 500;
 }
 
@@ -44,10 +60,16 @@ body {
     padding: 0px 20px 20px 20px;
 }
 
+/*
 .name {
     padding-left: 8px;
     background-color: rgb(23, 23, 23);
     border-style: solid;
+}
+*/
+
+.links a {
+    text-decoration: none;
 }
 
 .links a:hover {
@@ -71,6 +93,12 @@ input {
 h2 {
     padding: 0;
     margin: 0;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .disclaimer {
