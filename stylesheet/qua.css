@@ -49,7 +49,7 @@ body {
 .pages a {
     text-decoration: none;
     color: #000;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .pages a:hover {
@@ -90,8 +90,7 @@ a:hover {
     }
 
     .pages a {
-        font-size: 4.8pt;
-        font-weight: bold;
+        font-size: 8pt;
     }
 }
 
@@ -109,11 +108,11 @@ a:hover {
     }
 
     .pages {
-        gap: 11px;
+        gap: 10px;
     }
 
     .pages a {
-        font-size: 8.5pt;
+        font-size: 10pt;
     }
 }
 
