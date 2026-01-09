@@ -31,8 +31,9 @@ body {
 }
 
 .pages a {
+    font-family: 'JetBrains Mono';
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: 500;
 }
 
@@ -45,15 +46,19 @@ body {
 }
 
 .name {
-    padding-left: 8px;
-    background-color: rgb(23, 23, 23);
+    font-family: 'JetBrains Mono';
+    padding: 0px 0px 0px 8px;
     border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 p {
     padding: 10px;
     border-style: solid;
-    border-width: 0.5px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
     background-color: rgb(23, 23, 23);
     width: 50%;
 }
