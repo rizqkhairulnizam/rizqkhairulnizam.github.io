@@ -31,6 +31,240 @@
                 <div class="header">
                     <h1>RAT C2 Framework</h1>
                 </div>
+                <div class="actual-content">
+                    <p>
+                        What started as an idea given by my amazing supervisors
+                        somehow quickly turned into an actual project lol
+                    </p>
+                    <p>
+                        The original plan was simple:<br>
+                        “Hey, what if I tried recreating a command-and-control 
+                        (C2) communication system using Python and a Telegram bot?”
+                    </p>
+                    <p>
+                        Yeah. That. <br><br>
+
+                        I initially just wanted to mess around with Telegram 
+                        bots and see how messages could be sent and received 
+                        programmatically. But curiosity did its thing, and 
+                        before I knew it, I started layering in Batch scripts 
+                        and VBScript to make it feel more like an actual 
+                        Remote Access Trojan (RAT). Not to deploy (obviously ahah)
+                        but to understand how these things are structured 
+                        and why they work. So here it is, a proof-of-concept (PoC)
+                        RAT using a Telegram bot and a bunch of shady-looking scripts.
+                    </p>
+                    <p>
+                        This PoC RAT was built with:
+
+                        <ul>
+                            <li>Python (main logic)</li>
+                            <li>Batch scripting (execution + setup)</li>
+                            <li>VBScript (stealth… or at least, attempted stealth)</li>
+                            <li>Telegram as the C2 communication channel</li>
+                        </ul>
+
+                        The goal was never “malware for malware’s sake”, 
+                        but to study and document how Telegram-based 
+                        C2 systems function in the real world.
+                    </p>
+                    <p>
+                        <b class="warning">[*] DISCLAIMER: for educational purposes ONLY. Do NOT use this for messed up stuff or i'll come find you.</b>
+                    </p>
+                    <br>
+                    <h2>The Agent (agent.py)</h2>
+                    <hr>
+                    <p>
+                        At the core of this project is agent.py.
+                    </p>
+                    <p>
+                        This is the file that turns a host into an “agent”, 
+                        meaning once it’s running, it listens for commands 
+                        sent through a Telegram bot and responds accordingly. 
+                        Think of it as the bridge between the compromised 
+                        machine and the attacker-controlled chat. When executed, 
+                        the agent checks incoming Telegram messages and treats 
+                        them as commands. Whatever the bot sends, the agent reads, 
+                        executes, and replies back with results.
+                    </p>
+                    <p>
+                        To make this work, it needs:
+
+                        <ul>
+                            <li>a bot token (Telegram’s way of identifying your bot)</li>
+                            <li>a chat ID (so it knows who to listen to and reply to)</li>
+                        </ul>
+
+                        Nothing fancy, but enough to simulate real C2 behavior.
+                    </p>
+                    <br>
+                    <h2>Execution Logic (run_v2.bat)</h2>
+                    <hr>
+                    <p>
+                        Now, running agent.py manually is boring, 
+                        so I wrapped it in a Batch script :>
+                    </p>
+                    <p>
+                        run_v2.bat does a few things:
+
+                        <ul>
+                            <li>checks whether Python is installed</li>
+                            <li>installs required dependencies if they’re missing</li>
+                            <li>launches the agent automatically</li>
+                        </ul>
+
+                        There’s an older version (run.bat) that just 
+                        installs everything blindly and runs the agent, 
+                        but run_v2.bat is slightly smarter and less wasteful. 
+                        Same end goal, just cleaner execution.
+                    </p>
+                    <br>
+                    <h2>Hiding the Noise (run_hidden.vbs)</h2>
+                    <hr>
+                    <p>
+                        This is where VBScript comes in.
+                    </p>
+                    <p>
+                        To avoid popping up terminal windows 
+                        (which is, uh... suspicious), I created 
+                        run_hidden.vbs. Its job is simple: run 
+                        everything in the background without 
+                        showing any visible windows. It works... mostly.
+                        The one thing I haven’t fully solved yet 
+                        is hiding the Python installer confirmation 
+                        window when Python isn’t already present. 
+                        That part still needs work, but hey, 
+                        that’s part of the learning process.
+                    </p>
+                    <br>
+                    <h2>Bot Tokens, Chat IDs, and Why They Matter</h2>
+                    <hr>
+                    <p>
+                        Yes these are important stuff.
+                    </p>
+                    <p>
+                        A bot token is basically the password 
+                        for your Telegram bot. It authenticates 
+                        the bot and allows it to send and receive 
+                        messages. One bot = one unique token. Lose it, 
+                        and you’re cooked. A chat ID is the identifier 
+                        for the specific chat session the bot should 
+                        communicate with. Without it, the agent wouldn’t 
+                        know where to send responses. Together, these 
+                        two values form the backbone of the communication 
+                        channel between the agent and the operator.
+                    </p>
+                    <br>
+                    <h2>Test Commands</h2>
+                    <hr>
+                    <p>
+                        Stuff you can run on your C2 bot to see if
+                        it works.
+                    </p>
+                    <p>
+                        To confirm everything was functioning as expected, 
+                        I suggest a few basic test commands, such as:
+
+                        <ul>
+                            <li>whoami</li>
+                            <li>systeminfo</li>
+                            <li>screenshot (this will actually take a screenshot of victim's host)</li>
+                        </ul>
+
+                        Nothing advanced. Just enough to verify that 
+                        remote command execution and response 
+                        handling are working properly.
+                    </p>
+                    <br>
+                    <h2>Killing the Connection</h2>
+                    <hr>
+                    <p>
+                        This is pretty straight forward.
+                    </p>
+                    <p>
+                        To stop the connection, terminate the Python 
+                        process on the host machine, and the agent 
+                        goes silent. No magic, no persistence tricks. 
+                        This is a PoC, not an actual piece of malware.
+                    </p>
+                    <br>
+                    <h2>Process Flow Diagram</h2>
+                    <hr>
+                    <p>
+                        Here is how it looks like all together:
+                        <pre>
+┌────────────────────┐
+│    Attacker / OP   │
+│ (Telegram Account) │
+└─────────┬──────────┘
+          │ Commands / Messages
+          │ 
+          ▼
+┌────────────────────┐
+│   Telegram Bot API │
+│    (C2 Channel)    │
+└─────────┬──────────┘
+          │ Poll / Receive Messages
+          │ 
+          ▼
+┌────────────────────┐
+│     agent.py       │
+│   (Python Agent)   │
+│                    │
+│ - Reads bot msgs   │
+│ - Executes tasks   │
+│ - Sends responses  │
+└─────────┬──────────┘
+          │ Output / Results
+          │ 
+          ▼
+┌────────────────────┐
+│   Telegram Bot API │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│    Attacker / OP   │
+│  (Receives Output) │
+└────────────────────┘
+                        </pre>
+
+                    </p>
+                    <br>
+                    <h2>Final Thoughts</h2>
+                    <hr>
+                    <p>
+                        This is a good overview of the project. I made a 
+                        <a href="https://github.com/rizqkhairulnizam/rat-c2-tele-framework" target="_blank">github repo</a>
+                        that gives a full tutorial on how to set it up and
+                        use it for your own studies. Yes. Studies. PLEASE do not
+                        use this for anything else. Be the bigger person and 
+                        refrain from weaponizing software :>
+                    </p>
+                    <p>
+                        It was an insightful experience, building this up 
+                        and modifying it to understand how basic malware
+                        operate on a fundamental level. Even though this is
+                        not some Lazarus-level tech, it gives you a good
+                        idea of how malware crawls into your device and 
+                        stays there, exfiltrates user data and communicates
+                        with the threat actor. I look forward to try making
+                        PoCs of other types of malware.
+                    </p>
+                    <p>
+                        Happy tinkering.
+                    </p>
+                    <br>
+                    <h2>Credits</h2>
+                    <hr>
+                    <p>
+                        I got a ton of help from online resources. 
+                        Credits to 
+                        <a href="https://medium.com/@ssi51/how-i-built-my-own-telegram-c2-framework-7cf9e75e0323" target="_blank">Sarah</a>
+                        for the original agent.py file and telegram bot tutorial.
+                        What I did was making it stealthier and more malware-like.
+                    </p>
+                </div>
             </div>
         </div>
     </body>

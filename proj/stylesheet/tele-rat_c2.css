@@ -76,6 +76,14 @@ body {
     padding: 0px 50px;
 }
 
+a:hover {
+    color: #b34040;
+}
+
+.warning {
+    color: #b34040; 
+}
+
 /* phones */
 @media (max-width: 600px) {
 
@@ -96,6 +104,10 @@ body {
     .pages a {
         font-size: 6pt;
     }
+
+    .content {
+    padding: 0px 10px 0px 50px;
+}
 }
 
 /* tablets */
