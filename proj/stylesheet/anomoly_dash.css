@@ -96,6 +96,10 @@ body {
     .pages a {
         font-size: 6pt;
     }
+
+    .content {
+    padding: 0px 10px 0px 50px;
+    }
 }
 
 /* tablets */
