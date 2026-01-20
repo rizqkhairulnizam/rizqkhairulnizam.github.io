@@ -81,7 +81,8 @@ a:hover {
 }
 
 .warning {
-    color: #b34040; 
+    background-color: #b34040;
+    padding: 4px 8px;
 }
 
 /* phones */
