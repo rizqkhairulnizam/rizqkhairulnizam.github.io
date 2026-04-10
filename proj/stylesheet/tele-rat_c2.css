@@ -23,6 +23,10 @@ body {
     background: black;
 }
 
+p {
+    text-align: justify;
+}
+
 .menu {
     display: flex;                    /* puts logo and pages in one line */
     justify-content: space-between;   /* pushes logo left, pages right */
