@@ -23,6 +23,10 @@ body {
     background: black;
 }
 
+p {
+    text-align: justify;
+}
+
 .menu {
     display: flex;                    /* puts logo and pages in one line */
     justify-content: space-between;   /* pushes logo left, pages right */
@@ -74,6 +78,15 @@ body {
 
 .content {
     padding: 0px 50px;
+}
+
+a:hover {
+    color: #b34040;
+}
+
+.warning {
+    background-color: #b34040;
+    padding: 4px 8px;
 }
 
 /* phones */

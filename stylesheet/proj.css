@@ -78,14 +78,14 @@ body {
 }
 
 .tele-rat_c2 a,
-.anomoly_dash a,
-.arch-hypr-exp a{
+.arch-hypr-exp a,
+.pwnagotchi a{
     text-decoration: none;
 }
 
 .tele-rat_c2 a:hover,
-.anomoly_dash a:hover,
-.arch-hypr-exp a:hover{
+.arch-hypr-exp a:hover,
+.pwnagotchi a:hover{
     color: #b34040; 
 }
 
