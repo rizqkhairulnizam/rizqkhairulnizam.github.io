@@ -186,6 +186,86 @@
                         stuff.
                     </p>
                     <br>
+                    <h2>Gallery</h2>
+                    <hr>
+                    <br>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../img/arch-hypr-exp/home.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/btop.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/rmpc.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/vscode.png" onclick="openModal();currentSlide(4)" class="hover-shadow">  
+                            <img src="../img/arch-hypr-exp/neovim-lazyvim.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/yt-x.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/rofi-app-launcher.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                            <img src="../img/arch-hypr-exp/wlogout.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                        </div>
+                    </div>
+
+                    <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 8</div>
+                                <img src="../img/arch-hypr-exp/home.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 8</div>
+                                <img src="../img/arch-hypr-exp/btop.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 8</div>
+                                <img src="../img/arch-hypr-exp/rmpc.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 8</div>
+                                <img src="../img/arch-hypr-exp/vscode.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 8</div>
+                                <img src="../img/arch-hypr-exp/neovim-lazyvim.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">6 / 8</div>
+                                <img src="../img/arch-hypr-exp/yt-x.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">7 / 8</div>
+                                <img src="../img/arch-hypr-exp/rofi-app-launcher.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">8 / 8</div>
+                                <img src="../img/arch-hypr-exp/wlogout.png" style="width:100%">
+                            </div>
+
+                            <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+
+                            <div class="column">
+                                <img class="demo" src="../img/arch-hypr-exp/home.png" onclick="currentSlide(1)" alt="Home view">
+                                <img class="demo" src="../img/arch-hypr-exp/btop.png" onclick="currentSlide(2)" alt="Btop">
+                                <img class="demo" src="../img/arch-hypr-exp/rmpc.png" onclick="currentSlide(3)" alt="RMPC media player">
+                                <img class="demo" src="../img/arch-hypr-exp/vscode.png" onclick="currentSlide(4)" alt="VSCode">
+                                <img class="demo" src="../img/arch-hypr-exp/neovim-lazyvim.png" onclick="currentSlide(5)" alt="Lazyvim">
+                                <img class="demo" src="../img/arch-hypr-exp/yt-x.png" onclick="currentSlide(6)" alt="yt-x">
+                                <img class="demo" src="../img/arch-hypr-exp/rofi-app-launcher.png" onclick="currentSlide(7)" alt="Rofi">
+                                <img class="demo" src="../img/arch-hypr-exp/wlogout.png" onclick="currentSlide(8)" alt="wlogout">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <h2>Final Thoughts</h2>
                     <hr>
                     <p>
@@ -193,7 +273,7 @@
                         project post if I get into the tidbits of things. I made
                         a <a href="https://github.com/rizqkhairulnizam/arch-hypr-dotfiles" target="_blank">github repo</a> 
                         that contains my dotfiles and my rofi dmenu
-                        stuff (along with screenshots and some cool wallpapers) 
+                        stuff (along with the screenshots and some cool wallpapers) 
                         if you want to dive deeper. This isn't meant
                         to be a tutorial (oh god no) on how to get 
                         things started because if I must be honest with you
@@ -224,5 +304,44 @@
                 </div>
             </div>
         </div>
+
+        <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
     </body>
 </html>
