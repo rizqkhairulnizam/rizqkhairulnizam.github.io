@@ -79,13 +79,15 @@ body {
 
 .tele-rat_c2 a,
 .arch-hypr-exp a,
-.pwnagotchi a{
+.pwnagotchi a,
+.jurus a{
     text-decoration: none;
 }
 
 .tele-rat_c2 a:hover,
 .arch-hypr-exp a:hover,
-.pwnagotchi a:hover{
+.pwnagotchi a:hover,
+.jurus a:hover{
     color: #b34040; 
 }
 
