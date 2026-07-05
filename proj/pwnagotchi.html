@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>pwnagotchi</title>
+        <title>Pwnagotchi</title>
         <link rel="icon" href="../img/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="stylesheet/pwnagotchi.css">
     </head>
@@ -29,7 +29,7 @@
             </div>
             <div class="content">
                 <div class="header">
-                    <h1>Pwnagotchi (and Bjorn)</h1>
+                    <h1>Pwnagotchi</h1>
                 </div>
                 <div class="actual-content">
                     <p>
@@ -41,11 +41,10 @@
                         experience with Raspberry Pi Zero 2W (02w) during
                         one of my internships, I have decided to 
                         configure my own. Out of the things you can do
-                        with a 02w, I went with setting up both Pwnagotchi
-                        and Bjorn.
+                        with a 02w, I went with setting up my own pwnagotchi.
                     </p>
                     <p>
-                        <b class="warning">[*] I am an advocate for exploring new tech. PLEASE, DO SO RESPONSIBLY.</b>
+                        <b class="warning">[*] I am an advocate for exploring new tech. PLEASE DO SO RESPONSIBLY.</b>
                     </p>
                     <br>
                     <h2>
@@ -59,7 +58,84 @@
                         They were mainly established to promote computing 
                         education. Essentially, they function as a complete
                         computer (without the peripherals) and widely used 
-                        for DIY projects. 
+                        for DIY projects. Usually (depending on the model), 
+                        all you need in hand to operate it is a data-transfer 
+                        cable (yes, the one with the USB trident symbol) and 
+                        a micro-SD card.
+                    </p>
+                    <br>
+                    <h2>
+                        Pwnagotchi
+                    </h2>
+                    <hr>
+                    <p>
+                        <a href="https://pwnagotchi.org" target="_blank">This little guy</a> 
+                        is mainly used to capture WPA 
+                        key frames (4-way handshake) but can be used to monitor and
+                        inspect the network environment. It uses 
+                        <a href="https://www.bettercap.org" target="_blank">bettercap</a> 
+                        (which is an open-source program designed for network
+                        recon, MITM, packet sniffing, etc) and the firmware is flashed on an SD card
+                        and gets inserted into <a href="https://pwnagotchi.org/alternative-hardware/index.html" target="_blank">most SBCs</a>. 
+                        I prefer using the Pi Zero due to the compact 
+                        build it has. You don't really need much. I added in an 
+                        <a href="https://pwnagotchi.org/alternative-hardware/index.html" target="_blank">e-ink display</a> 
+                        since it comes with an interactive (kinda) UI. It's adorable.        
+                    </p>
+                    <p>
+                        Why capture WPA key frames? I wrote about 
+                        <a href="https://lnkd.in/p/g9meUptt" target="_blank">how 4-way handshakes work</a> 
+                        but simply put, we need those key frames to bruteforce our way into 
+                        gaining the passphrase. We can already do this with certain 
+                        tools like the aircrack-ng suite. Pwnagotchi just gives the 
+                        capturing and cracking process a gamified twist.
+                    </p>
+                    <br>
+                    <h2>
+                        Features
+                    </h2>
+                    <hr>
+                    <p>
+                        Pwnagotchi has its own name and level status, along with preset text 
+                        bubbles when something happens. Experience points are gained when it detects 
+                        a network and when it successfully captures its key frames. Pwnagotchi 
+                        also comes with expressive emotes and it changes based on its environment, 
+                        like when it detects a nearby network. Automatically, pwnagotchi will attempt 
+                        to capture a network's key frames by doing deauthentication and association 
+                        attacks. Captures, along with its config files, are stored within pwnagotchi 
+                        and can be accessed via ssh (and a DATA-TRANSFER cable[yes i'll say it again]).
+                        I believe they can also crack passwords but I haven't gone around and figured 
+                        that out yet. Conventionally, you can retrieve the captures from pwnagotchi 
+                        and use programs like aircrack to rock it.
+                    </p>
+                    <p>
+                        Since pwnagotchi is a <a href="https://pwnagotchi.org/contributing/index.html" target="_blank">community project</a>, 
+                        it is open-source and is open for 
+                        further development. Newer addition to the device includes a web UI and 
+                        AI mode. The web UI gives access to add certain 
+                        <a href="https://pwnagotchi.org/3rd-party-plugins/index.html" target="_blank">plugins</a>, 
+                        such as age, memory and temperature trackers (personal favourite).
+                    </p>
+                    <br>
+                    <h2>
+                        Thoughts
+                    </h2>
+                    <hr>
+                    <p>
+                        I look forward to playing with it a bit more to understand the more technical 
+                        expect of using it (with good intentions, of course). I think this device, 
+                        along with the others like Bjorn (looking forward to using it), 
+                        would make good learning tools to get to know wireless networks 
+                        and how to test them. How do networks work? How are they vulnerable? How can 
+                        we exploit it? How can we make them more secure? 
+                        These are the questions that you would ask 
+                        yourself when tinkering with gadgets like this. 
+                    </p>
+                    <p>
+                        I believe that hands-on experience is crucial when learning about how systems 
+                        work. Once I have understood the basics, I'd like to use physical tools to test 
+                        my understanding and of course, to have a little fun. It gets you doing things 
+                        and think, repeat it and then it sticks with you. 
                     </p>
                 </div>   
             </div>
