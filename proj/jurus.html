@@ -33,10 +33,570 @@
                 </div>
                 <div class="actual-content">
                     <p>
-                        My attempt during RawSEC's JURUS Cyber Engineer Program.
+                        A healthcare management system, built and secured
+                        for the JURUS Cyber Engineer Challenge.
+                    </p>
+                    <p>
+                        <b class="warning">Competency: Level 1 - ANALYST</b>
+                    </p>
+                    <br>
+                    <h2>JURUS Cyber Engineer</h2>
+                    <hr>
+                    <p>
+                        Learn by building. Prove by doing.
+                    </p>
+                    <p>
+                        I was selected to be a part of the first cohort of the 
+                        <a href="https://jurus.mcco.org.my" target="_blank">JURUS (Jurutera Siber rawSEC) Cyber Engineer Program</a>, 
+                        organized by <a href="https://www.rawsec.my" target="_blank">rawSEC</a>/<a href="https://mcco.org.my" target="_blank">MCCO</a> and the <a href="https://www.cyres.usm.my/en/" target="_blank">Cyber Research 
+                        Center (CYRES)</a>, Universiti Sains Malaysia (USM). This Program
+                        has 3 levels:
+
+                        <ul>
+                            <li>Level 1 - ANALYST</li>
+                            <li>Level 2 - PROFESSIONAL</li>
+                            <li>Level 3 - SPECIALIST</li>
+                        </ul>
+
+                        As of right now, they have only ran the course for the ANALYST level 
+                        while the other levels are still in their planning phase. More on this later. 
+                        <br>
+                        <br> 
+                        JURUS is a competency-based cybersecurity engineering program 
+                        and this level evaluates participants based on 6 domains/areas: 
+
+                        <ul>
+                            <li>System Engineering and Design</li>
+                            <li>Network Security</li>
+                            <li>Application Security</li>
+                            <li>Database Security</li>
+                            <li>Security Management</li>
+                            <li>Business Resiliency</li>
+                        </ul>
+
+                        and based on the above areas, participants need to 
+                        achieve a passing score of 70/100. I am more than happy
+                        to say I passed with an 84. Yes, I'm very 
+                        proud of it because holy sh*t-
+                        <br>
+                        <br>
+                        The program is more of a competency pathway for cyber 
+                        engineers where participants are assessed through real-world, 
+                        practical engineering tasks, live demonstrations, 
+                        troubleshooting, technical reports, and oral defense.
+                        I believe this sets it apart from other types of challenges
+                        since it does not just rely on training or exams. We were 
+                        expected to design a system and build it, then harden it 
+                        with security measures where we can, following each domain.
+                    </p>
+                    <br>
+                    <h2>The Challenge</h2>
+                    <hr>
+                    <p>
+                        An analyst in the making.
+                    </p>
+                    <p>
+                        So that's JURUS. Cool. But what did I have 
+                        to actually do for this level? Before 
+                        diving into my task, I would like to point out what was 
+                        prepared by the organizer for the participants. The program 
+                        started with a crashcourse that talked about the JURUS 
+                        program (mission, vision, goals, etc) and the 6 focus areas. This 
+                        felt more like a knowledge-sharing session since it went through 
+                        a lot of fundamental aspects of security, since the 6 domains cover 
+                        the basics of securing any model. 
+                        <br>
+                        <br>
+                        After that, there was another talk 
+                        on the evaluation process of the program. The 100-point system is 
+                        divided into 2 parts: report write-up and presentation. Each part 
+                        was worth 50 points each. A sample report was given to the cohort as 
+                        a reference point to let us know what was expected to be included in our
+                        report. Personally, I don't mind writing a lot. You know what was nerve-racking?
+                        The presentation portion. A general overview of our design (plus reasoning/justifications),
+                        a demo on how it works, proof of security measures and the scariest part,
+                        a stress test. That was scary, but the scare made it fun (i'm not a masochist i promise).
+                        <br>
+                        <br>
+                        After the crashcourse, we were emailed 3 different scenarios that
+                        we can respond to. One was about building a public healthcare platform, 
+                        another one is about building a university research collab portal 
+                        and the other one is about building a warehouse operations management 
+                        system. 3 different scenarios covering 3 different industries 
+                        that reflect real-world needs. We had to choose one. I chose the one with the 
+                        healthcare theme, because this industry seems to need more security (all critical 
+                        infra matter, just that <a href="https://industrialcyber.co/ransomware/storm-1175-exploits-web-facing-systems-to-drive-ransomware-attacks-across-healthcare-and-services-in-us-uk-australia/" target="_blank">healthcare gets hit a lot with ransomware</a> and TAs get away with it, GD thieves). The 
+                        similarity in these 3 assignments is that our role here is the lead cyber engineer and 
+                        that, in these situations, an existing system serving its 
+                        purpose is already there, just not secure enough. Our job is to design 
+                        a new system with security in mind, top to bottom. From infrastructure 
+                        to user data.
+                    </p>
+                    <br>
+                    <h2>The System</h2>
+                    <hr>
+                    <p>
+                        Oh man.
+                    </p>
+                    <p>
+                        Great, now you guys know what this is about and what I need to do.
+                        The fun part begins: actually doing things. The following is what 
+                        I have decided and implemented for my platform across all 6 domains.
+                        <br>
+                        <br>
+
+                        <details>
+                            <summary><b class="info">DOMAIN 1: System Engineering and Design</b></summary>
+                            <p>
+                                <b>Infrastructure</b>
+                                <ul>
+                                    <li>AWS EC2</li>
+                                    <li>AWS S3 (off-site backups)</li>
+                                </ul>
+                                <b>Operating System</b>
+                                <ul>
+                                    <li>Ubuntu Server</li>
+                                </ul>
+                                <b>Application</b>
+                                <ul>
+                                    <li>OpenEMR</li>
+                                </ul>
+                                <b>Database</b>
+                                <ul>
+                                    <li>MariaDB</li>
+                                </ul>
+                                <b>Containerization</b>
+                                <ul>
+                                    <li>Docker</li>
+                                </ul>
+                                <b>Web Services</b>
+                                <ul>
+                                    <li>Nginx Reverse Proxy</li>
+                                </ul>
+                                <b>Domain & DNS</b>
+                                <ul>
+                                    <li>No-IP Dynamic DNS</li>
+                                </ul>
+                                <b>Architecture</b>
+                                <ul>
+                                    <li>Multi-container deployment</li>
+                                    <li>Reverse proxy architecture</li>
+                                    <li>Layered (defense-in-depth) design</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        <details>
+                            <summary><b class="info">DOMAIN 2: Network Security</b></summary>
+                            <p>
+                                <b>Cloud Network</b>
+                                <ul>
+                                    <li>AWS Security Groups</li>
+                                </ul>
+                                <b>Host Firewall</b>
+                                <ul>
+                                    <li>UFW</li>
+                                    <li>default-deny inbound policy</li>
+                                </ul>
+                                <b>Intrusion Prevention</b>
+                                <ul>
+                                    <li>Fail2Ban</li>
+                                    <li>SSH bruteforce protection</li>
+                                </ul>
+                                <b>Secure Communications</b>
+                                <ul>
+                                    <li>HTTPS/TLS with CertBot (Certbot)</li>
+                                </ul>
+                                <b>Remote Access</b>
+                                <ul>
+                                    <li>SSH hardening</li>
+                                    <li>Key-based authentication</li>
+                                </ul>
+                                <b>Traffic Protection</b>
+                                <ul>
+                                    <li>Nginx reverse proxy</li>
+                                    <li>Hidden server version banner</li>
+                                    <li>Security headers</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        <details>
+                            <summary><b class="info">DOMAIN 3: Application Security</b></summary>
+                            <p>
+                                <b>Authentication</b>
+                                <ul>
+                                    <li>OpenEMR staff MFA</li>
+                                </ul>
+                                <b>Authorization</b>
+                                <ul>
+                                    <li>Role-Based Access Control (RBAC)</li>
+                                </ul>
+                                <b>Web Security (Security Headers)</b>
+                                <ul>
+                                    <li>X-Frame-Options</li>
+                                    <li>X-Content-Type-Options</li>
+                                    <li>Referrer Policy</li>
+                                    <li>Permissions Policy</li>
+                                </ul>
+                                <b>Information Disclosure</b>
+                                <ul>
+                                    <li>Hidden Nginx version</li>
+                                    <li>Protected document directories</li>
+                                </ul>
+                                <b>Application Hardening</b>
+                                <ul>
+                                    <li>Idle Session Timeout (4 minutes: staff, 5: minutes patient portal)</li>
+                                    <li>Minimum 14-character strong password requirement</li>
+                                    <li>HTTPS-only access</li>
+                                    <li>Unique password requirement (3 rotations)</li>
+                                    <li>Maximum failed login attempt (3)</li>
+                                    <li>Time to reset attempt (5 minutes)</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        <details>
+                            <summary><b class="info">DOMAIN 4: Database Security</b></summary>
+                            <p>
+                                <b>Access Control</b>
+                                <ul>
+                                    <li>Least-privilege database account</li>
+                                    <li>Restricted application user</li>
+                                </ul>
+                                <b>Credential Management</b>
+                                <ul>
+                                    <li>Environment variables (.env)</li>
+                                </ul>
+                                <b>Data Protection</b>
+                                <ul>
+                                    <li>Docker persistent volumes</li>
+                                </ul>
+                                <b>Verification</b>
+                                <ul>
+                                    <li>Database privilege validation</li>
+                                    <li>System database access restriction</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        <details>
+                            <summary><b class="info">DOMAIN 5: Security Management</b></summary>
+                            <p>
+                                <b>System Monitoring / Visualization</b>
+                                <ul>
+                                    <li>Grafana</li>
+                                </ul>
+                                <b>Metrics Collection</b>
+                                <ul>
+                                    <li>Prometheus</li>
+                                </ul>
+                                <b>Centralized Logging</b>
+                                <ul>
+                                    <li>Loki</li>
+                                    <li>Promtail</li>
+                                </ul>
+                                <b>Container Management</b>
+                                <ul>
+                                    <li>Portainer</li>
+                                </ul>
+                                <b>Firewall Monitoring</b>
+                                <ul>
+                                    <li>UFW Logs</li>
+                                </ul>
+                                <b>System Logs</b>
+                                <ul>
+                                    <li>Nginx logs</li>
+                                    <li>Docker logs</li>
+                                    <li>Linux system logs</li>
+                                </ul>
+                                <b>Maintenance</b>
+                                <ul>
+                                    <li>Log rotation</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        <details>
+                            <summary><b class="info">DOMAIN 6: Business Resilience</b></summary>
+                            <p>
+                                <b>Backup</b>
+                                <ul>
+                                    <li>MariaDB SQL backup (mysqldump)</li>
+                                    <li>Docker Container backups</li>
+                                </ul>
+                                <b>Automation</b>
+                                <ul>
+                                    <li>Bash backup script</li>
+                                    <li>Cron scheduling</li>
+                                </ul>
+                                <b>Storage</b>
+                                <ul>
+                                    <li>AWS EC2 (Ubuntu Server / local)</li>
+                                    <li>AWS S3 (Bucket / off-site)</li>
+                                    <li>External Hardrive (physical / offline)</li>
+                                </ul>
+                                <b>Recovery Point Objective (RPO)</b>
+                                <ul>
+                                    <li>Data backup: 1 day</li>
+                                    <li>Container backup: 7 days</li>
+                                </ul>
+                            </p>
+                        </details>
+                        <br>
+                        <br>
+                        Since I underestimated the amount of time needed to 
+                        finish the project, admittedly, I did not have enough 
+                        time to polish certain aspects. I did not work on much 
+                        for the Business Resilience domain. Given more time, I 
+                        may make a complete BIA, BCP and simulate a disaster so 
+                        that I can thoroughly test my backups and 
+                        to record RTO. Also to see if I can actually rebuild my system
+                        from the ground up if my entire infrastructure were to go down.
+                    </p>
+                    <p>
+                        I don't think I will go through individual features and 
+                        screenshots, but since I did have to write a report on
+                        this, I'll leave that <a href="../docs/RizqKhairulnizam_JURUS.pdf" target="_blank">here</a> instead. The report should 
+                        explain the entire system, including justifications and 
+                        other details. At the end of this page, I also have a photo 
+                        gallery that showcases some of the pictures I have 
+                        of the experience, inlcuding the network diagram! [dont share 
+                        your network diagram, people]. All in all, 
+                        solid base system with a huge, scalable potential.
+                    </p>
+                    <br>
+                    <h2>Results</h2>
+                    <hr>
+                    <p>
+                        Worth it, no regrets.
+                    </p>
+                    <p>
+                        I <a href="https://jurus.mcco.org.my/badges/212f7a33-aeb8-443b-9e7f-ca477cd77dea" target="_blank">passed</a> and scored 84/100! 
+                        (the <a href="../img/jurus/JURUS_badge.jpg" target="_blank">badge</a> looks neat). On the day of the commissioning/award 
+                        ceremony, we had to sit in ranks, from first to last. Due 
+                        to the fact that not everyone attended, my name 
+                        was called second but I know for a fact I'm not 
+                        ranked second. Maybe (hoepfully) top 5? Unfortunately, scores and rankings were
+                        not disclosed on any of our credential badges or given records.
+                        Honestly, definitely worth the hustle. The ceremony was held 
+                        at the National CyberSecurity Summit (NCSS) 2026, Putrajaya 
+                        International Convention Center (PICC) organized by the 
+                        <a href="https://www.nacsa.gov.my" target="_blank">National CyberSecurity Agency (NACSA)</a>. I got to join in
+                        as a conference delegate! Aside from conferences that 
+                        dicussed security topics, there were exhibitions that showcased a ton of cool 
+                        stuff (like a military grade cyberdeck-style proxy for secured comms). 
+                    </p>
+                    <p>
+                        The entire day after the event was filled with talks and 
+                        networking opportunities. The chairman of
+                        rawSEC/MCCO, <a href="https://www.linkedin.com/in/ts-tahrizi-tahreb/" target="_blank">Ts. Tarhizi Tahreb</a> (the same guy 
+                        that's also the CISO for Bank Rakyat) attended and officiated 
+                        the award ceremony. On stage, him and NACSA's Chief Executive, 
+                        <a href="https://www.linkedin.com/in/ir-dr-megat-zuhairy-megat-tajuddin-8b150335/" target="_blank">Ir. Dr. Megat Zuhairy Megat Tajuddin</a>, were present to hand the awards.
+                    </p>
+                    <p>
+                        Funny story: the CE asked me how old I was. He was shocked to hear 
+                        how young I am. Wait until he hears about that JURUSan that just sat 
+                        for their SPM XD
+                    </p>
+                    <br>
+                    <h2>Gallery</h2>
+                    <hr>
+                    <p>
+                        I had a blast. Here are some shots I have with me (im a bit paranoid so i'll share
+                        what i can hahahah [again: never a good idea to 
+                        expose your network diagram, never do this [yes, including me. 
+                        its just that this isn't a legitimate system for a 
+                        healthcare org lol]]).
+                    </p>
+                    <br>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../img/jurus/diagram.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                            <img src="../img/jurus/openemr-login.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                            <img src="../img/jurus/openemr-adminview.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                            <img src="../img/jurus/openemr-patient.png" onclick="openModal();currentSlide(4)" class="hover-shadow">  
+                            <img src="../img/jurus/openemr-patientview.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                            <img src="../img/jurus/portainer-dashboard.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                            <img src="../img/jurus/grafana-loki.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                            <img src="../img/jurus/grafana-prometheus.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                            <img src="../img/jurus/self.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">  
+                            <img src="../img/jurus/commissioning.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+                            <img src="../img/jurus/grad1.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+                            <img src="../img/jurus/grad2.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
+                            <img src="../img/jurus/JURUS_badge.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
+                        </div>
+                    </div>
+
+                    <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 13</div>
+                                <img src="../img/jurus/diagram.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 13</div>
+                                <img src="../img/jurus/openemr-login.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 13</div>
+                                <img src="../img/jurus/openemr-adminview.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 13</div>
+                                <img src="../img/jurus/openemr-patient.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 13</div>
+                                <img src="../img/jurus/openemr-patientview.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">6 / 13</div>
+                                <img src="../img/jurus/portainer-dashboard.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">7 / 13</div>
+                                <img src="../img/jurus/grafana-loki.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">8 / 13</div>
+                                <img src="../img/jurus/grafana-prometheus.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">9 / 13</div>
+                                <img src="../img/jurus/self.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">10 / 13</div>
+                                <img src="../img/jurus/commissioning.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">11 / 13</div>
+                                <img src="../img/jurus/grad1.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">12 / 13</div>
+                                <img src="../img/jurus/grad2.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">13 / 13</div>
+                                <img src="../img/jurus/JURUS_badge.jpg" style="width:100%">
+                            </div>
+
+                            <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+
+                            <div class="column">
+                                <img class="demo" src="../img/jurus/diagram.png" onclick="currentSlide(1)" alt="Home view">
+                                <img class="demo" src="../img/jurus/openemr-login.png" onclick="currentSlide(2)" alt="Btop">
+                                <img class="demo" src="../img/jurus/openemr-adminview.png" onclick="currentSlide(3)" alt="RMPC media player">
+                                <img class="demo" src="../img/jurus/openemr-patient.png" onclick="currentSlide(4)" alt="VSCode">
+                                <img class="demo" src="../img/jurus/openemr-patientview.png" onclick="currentSlide(5)" alt="Lazyvim">
+                                <img class="demo" src="../img/jurus/portainer-dashboard.png" onclick="currentSlide(6)" alt="yt-x">
+                                <img class="demo" src="../img/jurus/grafana-loki.png" onclick="currentSlide(7)" alt="Rofi">
+                                <img class="demo" src="../img/jurus/grafana-prometheus.png" onclick="currentSlide(8)" alt="wlogout">
+                                <img class="demo" src="../img/jurus/self.jpg" onclick="currentSlide(9)" alt="VSCode">
+                                <img class="demo" src="../img/jurus/commissioning.jpg" onclick="currentSlide(10)" alt="Lazyvim">
+                                <img class="demo" src="../img/jurus/grad1.jpg" onclick="currentSlide(11)" alt="yt-x">
+                                <img class="demo" src="../img/jurus/grad2.jpg" onclick="currentSlide(12)" alt="Rofi">
+                                <img class="demo" src="../img/jurus/JURUS_badge.jpg" onclick="currentSlide(13)" alt="wlogout">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2>Final Thoughts</h2>
+                    <hr>
+                    <p>
+                        120 applicants. 92 participants. 50+ submitted 
+                        reports. 30+ passed. Great job, everyone.
+                    </p>
+                    <p>
+                        As of right now, there has not 
+                        been any news regarding another ANALYST cohort, but 
+                        according to rawSEC/MCCO Vice Chairman, <a href="https://www.linkedin.com/in/knadzmi/" target="_blank">Ts. Khairul Nadzmi</a>,
+                        a new cohort for the PROFESSIONAL level may start
+                        in the 4th quarter of this year, maybe around 
+                        October or November. The ones that will 
+                        be engaging into L2 will only be the ones who have passed 
+                        L1. 
+                    </p>
+                    <p>
+                        Honestly, this entire experience was like nothing I have seen 
+                        or heard about before. It is not some CTF or cyberbattle where you
+                        use ready made tool to monitor or attack, instead it asks you to build 
+                        (really similar to hackathons, just... cyber lol). It was an engineering challenge 
+                        made to test how capable you are with designing, building, securing and 
+                        managing a system. That is something I thought I could never do alone. 
+                        Through this challenge, I am glad to say I have successfully pushed my 
+                        own limits. While doing so, I have learned a whole lot more about 
+                        cyber engineering an entire platform. I look forward to joining the 
+                        next cohort for L2. Can't wait.
                     </p>
                 </div>
             </div>
         </div>
+
+        <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
     </body>
 </html>
