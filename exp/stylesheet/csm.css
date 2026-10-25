@@ -76,6 +76,57 @@ body {
     padding: 0px 50px;
 }
 
+.rectangle {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #00000000;
+    border: 2px solid #ffffffff;
+}
+
+.finisher-header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#finisher-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.finisher-header p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 0px 0px 0px 15px;
+}
+
+.card-stat p {
+    display: grid;
+    grid-template-columns: 50px 15px auto;
+    margin: 12px 0;
+}
+
+.card-stat p span:nth-child(2) {
+    text-align: center;
+}
+
+.card-stat a{
+    text-decoration: none;
+}
+
+.card-stat a:hover {
+    color: #b34040; 
+}
+
 /* phones */
 @media (max-width: 600px) {
 
